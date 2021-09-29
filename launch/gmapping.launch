@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping">
+        <remap from="scan" to="/base_scan"/>
+    </node>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find stage_tutorial)/rviz/rviz.rviz" output="screen"/>
+</launch>
